@@ -6,7 +6,8 @@ namespace assignment0
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var Program = new Program();
+            Program.YayOrNay();
         }
 
         public bool IsLeapYear(int year) {
@@ -19,6 +20,19 @@ namespace assignment0
             } else {
                 return false;
             }
+        }
+
+        public void YayOrNay(){
+            Console.WriteLine("Please enter a year");
+
+            string yearString = Console.ReadLine();
+
+            int year = int.Parse(yearString);
+
+            if (IsLeapYear(year)) {
+                Console.WriteLine("Yay");
+                } else Console.WriteLine("Nay");
+
         }
 
 
